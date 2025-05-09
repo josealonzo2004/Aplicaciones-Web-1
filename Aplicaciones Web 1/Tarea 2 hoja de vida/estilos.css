@@ -1,0 +1,163 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    display: flex;
+    max-width: 1000px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+/* Columnas */
+.left-column {
+    width: 35%;
+    padding: 30px;
+    background-color: #d5f1ee;;
+}
+
+.right-column {
+    width: 65%;
+    padding: 30px;
+    background-color: #f9f9f9;
+}
+
+/* Foto de perfil */
+.profile-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.profile-img {
+    width: 180px;
+    height: 190px;
+    border-radius: 50%;
+    border: 3px dashed #2ec4b6;
+    object-fit: cover;
+}
+
+/* Títulos */
+h1 {
+    color: #2ec4b6;
+    font-size: 28px;
+    margin-bottom: 5px;
+}
+
+h2 {
+    color: #2ec4b6;
+    font-size: 24px;
+    margin: 25px 0 15px 0;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.subtitle {
+    margin-bottom: 10px;
+}
+
+hr {
+    margin: 15px 0;
+    border: none;
+    border-top: 1px solid #cfcfcf;
+}
+
+/* Secciones */
+.section {
+    margin-bottom: 30px;
+}
+
+/* Contacto */
+.contact-info p {
+    margin: 8px 0;
+}
+
+/* Estudios Realizados */
+.estudios-item {
+    margin-bottom: 15px;
+}
+
+.year {
+    font-weight: bold;
+}
+
+/* Experiencia laboral*/
+.Experiencia {
+    margin-bottom: 20px;
+}
+
+.Experiencia-periodo {
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.Experiencia-titulo {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* Capacitaciones */
+.capacitaciones {
+    list-style-type: none;
+}
+
+.capacitaciones li {
+    margin-bottom: 10px;
+    padding-left: 20px;
+    position: relative;
+}
+
+.capacitaciones li::before {
+    content: "💡";
+}
+
+/* Referencias */
+.reference {
+    margin-bottom: 20px;
+  }
+  
+  .reference-name {
+    font-weight: bold;
+  }
+  
+  .reference-position {
+    font-style: italic;
+    margin-bottom: 5px;
+  }
+  
+  /* Tabla de referencias */
+  .references-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .references-table th {
+    background-color: #2ec4b6;
+    color: white;
+    text-align: left;
+    padding: 10px;
+    font-weight: bold;
+  }
+  
+  .references-table td {
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .references-table tr:last-child td {
+    border-bottom: none;
+  }
+  
+  .references-table tr:hover {
+    background-color: #f5f5f5;
+  }
