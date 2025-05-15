@@ -1,0 +1,57 @@
+/* Estilo general del cuerpo de la página */
+body {
+    font-family: Arial;
+    margin: 20px;
+    background-color: #969696;
+}
+
+/* Contenedor principal que agrupa los elementos del formulario */
+.container {
+    width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 2px solid #a6ff00;
+    background-color: white;
+}
+
+h1 {
+    color: #a6ff00;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 10px;
+}
+
+/* Estilo de los campos */
+label {
+    display: block;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding: 5px;
+    border: 1px solid #969696;
+}
+
+/* Estilo del botón */
+button {
+    background-color: #a6ff00;
+    color: rgb(68, 68, 68);
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    width: 100%;
+}
+
+/* Sección para mostrar resultados */
+#resultados {
+    margin-top: 20px;
+    border: 1px solid #969696;
+    padding: 10px;
+    background-color: #f9f9f9;
+    text-align: center;
+}
