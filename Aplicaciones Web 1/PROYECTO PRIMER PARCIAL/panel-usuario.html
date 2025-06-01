@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Usuario - Sistema de Parqueaderos ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-with-logo">
+            <img src="images/logo-uleam.jpeg" alt="Logo ULEAM" class="logo-header">
+            <h1>Sistema de Parqueaderos ULEAM</h1>
+        </div>
+        <div class="user-info">
+            <span>Bienvenido, Usuario</span>
+            <button onclick="logout()" class="btn-danger">Cerrar Sesión</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="welcome-section">
+            <h2>Panel de Usuario</h2>
+        </div>
+        
+        <div class="navigation-menu">
+            <button onclick="location.href='reserva-espacio.html'" class="btn-primary">Ver Disponibilidad y Reservar Espacio</button>
+            <button onclick="location.href='mis-reservas.html'" class="btn-primary">Mis Reservas</button>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Resumen de Reservas Activas</h3>
+            <div class="active-reservation">
+                <div class="reservation-card">
+                    <h4>Reserva Activa</h4>
+                    <p><strong>Zona:</strong> Zona A</p>
+                    <p><strong>Espacio:</strong> A-15</p>
+                    <p><strong>Hora Fin:</strong> 16:30</p>
+                    <p><strong>Estado:</strong> <span class="status active">Activa</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Simple -->
+    <footer class="home-footer">
+        <p>&copy; 2024 Universidad Laica Eloy Alfaro de Manabí - Sistema de Parqueaderos</p>
+    </footer>
+
+    <script src="validaciones.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

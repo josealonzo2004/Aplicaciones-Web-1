@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel Administrador - Sistema de Parqueaderos ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-with-logo">
+            <img src="images/logo-uleam.jpeg" alt="Logo ULEAM" class="logo-header">
+            <h1>Sistema de Parqueaderos ULEAM</h1>
+        </div>
+        <div class="user-info">
+            <span>Bienvenido, Administrador</span>
+            <button onclick="logout()" class="btn-danger">Cerrar Sesión</button>
+        </div>
+    </div>
+    
+    <div class="main-content">
+        <div class="welcome-section">
+            <h2>Panel de Administrador</h2>
+        </div>
+        
+        <div class="navigation-menu">
+            <button onclick="location.href='gestion-usuarios.html'" class="btn-primary">Gestión de Usuarios</button>
+            <button onclick="location.href='gestion-parqueaderos.html'" class="btn-primary">Gestión de Parqueaderos</button>
+        </div>
+        
+        <div class="summary-section">
+            <h3>Resumen del Sistema</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h4>Espacios Totales</h4>
+                    <span class="stat-number">150</span>
+                </div>
+                <div class="stat-card">
+                    <h4>Espacios Disponibles</h4>
+                    <span class="stat-number green">85</span>
+                </div>
+                <div class="stat-card">
+                    <h4>Usuarios Registrados</h4>
+                    <span class="stat-number">245</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Footer Simple -->
+    <footer class="home-footer">
+        <p>&copy; 2024 Universidad Laica Eloy Alfaro de Manabí - Sistema de Parqueaderos</p>
+    </footer>
+
+    <script src="validaciones.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

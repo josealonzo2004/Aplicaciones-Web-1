@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestión de Usuarios - Sistema ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-with-logo">
+            <img src="images/logo-uleam.jpeg" alt="Logo ULEAM" class="logo-header">
+            <h1>Gestión de Usuarios</h1>
+        </div>
+        <button onclick="location.href='panel-admin.html'" class="btn-secondary">Volver al Panel</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="search-section">
+            <input type="text" id="searchUser" placeholder="Buscar usuarios..." class="search-input">
+            <button onclick="showAddUserForm()" class="btn-primary">Registrar Nuevo Usuario</button>
+        </div>
+        
+        <div class="section">
+            <table class="data-table">
+                <thead>
+                    <tr>
+                        <th>Nombre Completo</th>
+                        <th>Email</th>
+                        <th>Rol</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="usersTable">
+                    <tr>
+                        <td>Juan Pérez García</td>
+                        <td>juan.perez@uleam.edu.ec</td>
+                        <td>Usuario</td>
+                        <td>
+                            <button class="btn-secondary" onclick="showAddUserForm()">Editar</button>
+                            <button class="btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>María López Rodríguez</td>
+                        <td>maria.lopez@uleam.edu.ec</td>
+                        <td>Administrador</td>
+                        <td>
+                            <button class="btn-secondary" onclick="showAddUserForm()">Editar</button>
+                            <button class="btn-danger">Eliminar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <!-- Modal para formulario de usuario -->
+    <div id="userModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="hideAddUserForm()">&times;</span>
+            <h3>Registrar/Editar Usuario</h3>
+            <form>
+                <div class="input-group">
+                    <label for="userNames">Nombres y Apellidos:</label>
+                    <input type="text" id="userNames" required>
+                </div>
+                <div class="input-group">
+                    <label for="userCedula">Cédula:</label>
+                    <input type="text" id="userCedula" required>
+                </div>
+                <div class="input-group">
+                    <label for="userEmail">Email:</label>
+                    <input type="email" id="userEmail" required>
+                </div>
+                <div class="input-group">
+                    <label for="userRole">Rol:</label>
+                    <select id="userRole">
+                        <option value="usuario">Usuario</option>
+                        <option value="administrador">Administrador</option>
+                    </select>
+                </div>
+                <div class="input-group">
+                    <label for="userPassword">Contraseña:</label>
+                    <input type="password" id="userPassword" required>
+                </div>
+                <div class="input-group">
+                    <label for="userConfirmPassword">Confirmar Contraseña:</label>
+                    <input type="password" id="userConfirmPassword" required>
+                </div>
+                <button type="submit" class="btn-primary">Guardar Usuario</button>
+                <button type="button" onclick="hideAddUserForm()" class="btn-secondary">Cancelar</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="validaciones.js"></script>
+    <script src="script.js"></script>
+    
+    <!-- Footer Simple -->
+    <footer class="home-footer">
+        <p>&copy; 2024 Universidad Laica Eloy Alfaro de Manabí - Sistema de Parqueaderos</p>
+    </footer>
+</body>
+</html>

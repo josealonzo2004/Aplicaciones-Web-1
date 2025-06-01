@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Espacio - Sistema ULEAM</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="header">
+        <div class="header-with-logo">
+            <img src="images/logo-uleam.jpeg" alt="Logo ULEAM" class="logo-header">
+            <h1>Reserva y Disponibilidad de Espacio</h1>
+        </div>
+        <button onclick="location.href='panel-usuario.html'" class="btn-secondary">Volver al Panel</button>
+    </div>
+    
+    <div class="main-content">
+        <div class="search-filters">
+            <h2>Filtros de Búsqueda</h2>
+            <form id="searchForm">
+                <div class="filter-row">
+                    <div class="input-group">
+                        <label for="selectZone">Seleccionar Zona:</label>
+                        <select id="selectZone" required>
+                            <option value="">Seleccione una zona</option>
+                            <option value="zona-a">Zona A</option>
+                            <option value="zona-b">Zona B</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="vehicleTypeFilter">Tipo de Vehículo:</label>
+                        <select id="vehicleTypeFilter">
+                            <option value="auto">Auto</option>
+                            <option value="moto">Motocicleta</option>
+                            <option value="Vehiculos Pesados">Vehiculos Pesados</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="filter-row">
+                    <div class="input-group">
+                        <label for="reserveDate">Fecha de Reserva:</label>
+                        <input type="date" id="reserveDate" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="startTime">Hora de Inicio:</label>
+                        <input type="time" id="startTime" required>
+                    </div>
+                    <div class="input-group">
+                        <label for="endTime">Hora de Fin:</label>
+                        <input type="time" id="endTime" required>
+                    </div>
+                </div>
+                <button type="submit" class="btn-primary">Buscar Espacios Disponibles</button>
+            </form>
+        </div>
+        
+        <div id="availabilitySection" class="section" style="display: none;">
+            <h2>Disponibilidad de Espacios - Zona A</h2>
+            <div class="spaces-grid">
+                <div class="space available" onclick="selectSpace('A-01')">
+                    <span>A-01</span>
+                    <div class="status-indicator available"></div>
+                </div>
+                <div class="space occupied">
+                    <span>A-02</span>
+                    <div class="status-indicator occupied"></div>
+                </div>
+                <div class="space available" onclick="selectSpace('A-03')">
+                    <span>A-03</span>
+                    <div class="status-indicator available"></div>
+                </div>
+                <div class="space available" onclick="selectSpace('A-04')">
+                    <span>A-04</span>
+                    <div class="status-indicator available"></div>
+                </div>
+                <div class="space occupied">
+                    <span>A-05</span>
+                    <div class="status-indicator occupied"></div>
+                </div>
+                <div class="space available" onclick="selectSpace('A-06')">
+                    <span>A-06</span>
+                    <div class="status-indicator available"></div>
+                </div>
+            </div>
+            <div class="legend">
+                <div class="legend-item">
+                    <div class="status-indicator available"></div>
+                    <span>Disponible</span>
+                </div>
+                <div class="legend-item">
+                    <div class="status-indicator occupied"></div>
+                    <span>Ocupado</span>
+                </div>
+            </div>
+        </div>
+        
+        <div id="confirmationSection" class="form-section" style="display: none;">
+            <h3>Confirmación de Reserva</h3>
+            <div class="reservation-details">
+                <p><strong>Espacio Seleccionado:</strong> <span id="selectedSpace"></span></p>
+                <p><strong>Zona:</strong> Zona A</p>
+                <p><strong>Tipo:</strong> Auto</p>
+                <p><strong>Fecha:</strong> <span id="selectedDate"></span></p>
+                <p><strong>Hora Inicio:</strong> <span id="selectedStartTime"></span></p>
+                <p><strong>Hora Fin:</strong> <span id="selectedEndTime"></span></p>
+            </div>
+            <button onclick="confirmReservation()" class="btn-primary">Confirmar Reserva</button>
+            <button onclick="cancelSelection()" class="btn-secondary">Cancelar</button>
+        </div>
+    </div>
+    
+    <!-- Footer Simple -->
+    <footer class="home-footer">
+        <p>&copy; 2024 Universidad Laica Eloy Alfaro de Manabí - Sistema de Parqueaderos</p>
+    </footer>
+
+    <script src="validaciones.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
